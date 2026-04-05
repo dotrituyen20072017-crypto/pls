@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Học Code HTML Chuẩn SEO: Hướng Dẫn Từ Cơ Bản Đến Nâng Cao</title>
+    <meta name="description" content="Hướng dẫn cách code HTML chuẩn SEO tại FPT Polytechnic. Khám phá cấu trúc Heading, tối ưu hình ảnh và các nguyên lý thiết kế web hiện đại.">
+    <link rel="canonical" href="https://example.com/huong-dan-code-html-seo">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Học Code HTML Chuẩn SEO: Hướng Dẫn Từ Cơ Bản Đến Nâng Cao",
+      "author": {
+        "@type": "Person",
+        "name": "FPT Polytechnic Student"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FPT Education"
+      }
+    }
+    </script>
+
+    <style>
+        /* CSS VARIABLES & RESET */
+        :root {
+            --fpt-orange: #F27024;
+            --fpt-blue: #233162;
+            --text-color: #333;
+            --bg-light: #f4f4f4;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+
+        /* HEADER & MENU */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu ul li a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: var(--fpt-blue);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        /* Hiệu ứng đổi màu khi di chuột */
+        .menu ul li a:hover {
+            color: var(--fpt-orange);
+        }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 1px solid #ddd;
+            padding-left: 20px;
+        }
+
+        .user-avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #ddd;
+            object-fit: cover;
+        }
+
+        /* HERO SECTION (Cải tiến từ ảnh 1) */
+        .hero {
+            background: linear-gradient(135deg, #fff 60%, var(--bg-light) 100%);
+            padding: 60px 20px;
+            border-bottom: 5px solid var(--fpt-orange);
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            position: relative;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 15px;
+            box-shadow: 20px 20px 0px var(--fpt-blue);
+        }
+
+        .hero-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: var(--fpt-blue);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        /* BREADCRUMBS */
+        .breadcrumbs {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .main-article {
+            background: #fff;
+        }
+
+        /* Mục lục tự động */
+        .toc {
+            background: var(--bg-light);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .toc h2 { font-size: 1.2rem; margin-bottom: 10px; }
+        .toc ul { list-style: circle; padding-left: 20px; }
+        .toc a { text-decoration: none; color: var(--fpt-blue); }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--fpt-blue); margin: 30px 0 15px; border-left: 5px solid var(--fpt-orange); padding-left: 15px; }
+        h3 { color: var(--fpt-orange); margin: 20px 0 10px; }
+        
+        p { margin-bottom: 15px; }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--fpt-blue);
+            color: white;
+            padding: 50px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            .hero-container { text-align: center; justify-content: center; }
+            .menu { display: none; } /* Đơn giản hóa cho mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Logo FPT Polytechnic">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#gioi-thieu">Giới thiệu</a></li>
+                    <li><a href="#huong-dan">Hướng dẫn Code</a></li>
+                    <li><a href="#seo-tips">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="user-profile">
+                <span>Chào, <strong>Sinh viên</strong></span>
+                <img src="anhsv.jpg" alt="User Avatar" class="user-avatar">
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumbs">
+        Trang chủ > Lập trình Web > Học HTML Chuẩn SEO
+    </div>
+
+    <section class="hero" id="gioi-thieu">
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="sv.jpg" alt="Lập trình viên FPT Polytechnic học HTML CSS">
+            </div>
+            <div class="hero-content">
+                <h1>XÂY DỰNG TRANG WEB CÙNG FPOLY</h1>
+                <p>FPT Polytechnic hân hạnh chào đón các bạn sinh viên đến với bộ môn "Xây dựng trang web". Đây là một trong những môn học nền tảng quan trọng nhất trong lộ trình trở thành một lập trình viên chuyên nghiệp.</p>
+                <p>Tại đây, bạn sẽ làm chủ <strong>HTML5, CSS3</strong> và các nguyên lý thiết kế giao diện hiện đại để tạo ra những sản phẩm bền vững trên công cụ tìm kiếm.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <article class="main-article">
+            <div class="toc">
+                <h2>Mục lục bài viết</h2>
+                <ul>
+                    <li><a href="#cau-truc-html">1. Cấu trúc HTML cơ bản</a></li>
+                    <li><a href="#he-thong-heading">2. Hệ thống thẻ Heading chuẩn SEO</a></li>
+                    <li><a href="#toi-uu-anh">3. Tối ưu hóa hình ảnh</a></li>
+                    <li><a href="#internal-link">4. Liên kết nội bộ và điều hướng</a></li>
+                </ul>
+            </div>
+
+            <h2 id="cau-truc-html">1. Cấu trúc HTML cơ bản cho người mới</h2>
+            <p>HTML (HyperText Markup Language) là ngôn ngữ đánh dấu siêu văn bản. Để một trang web hiển thị đúng, bạn cần tuân thủ cấu trúc chuẩn:</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;title&gt;Tiêu đề chuẩn SEO dưới 60 ký tự&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Tiêu đề chính duy nhất&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <h2 id="he-thong-heading">2. Hệ thống thẻ Heading (H1 - H6)</h2>
+            <p>Như đã thấy trong sơ đồ hướng dẫn, việc phân cấp thẻ Heading giúp Google hiểu được nội dung nào là quan trọng nhất.</p>
+            <h3>Sử dụng thẻ H1</h3>
+            <p>Mỗi trang chỉ nên có <strong>duy nhất một thẻ H1</strong>. Thẻ này thường chứa từ khóa chính và bao quát toàn bộ nội dung bài viết.</p>
+            <h3>Sử dụng thẻ H2 và H3</h3>
+            <p>Thẻ H2 dùng cho các ý lớn, H3 dùng để giải thích chi tiết cho các ý trong H2. Điều này tạo nên một cấu trúc hình cây logic.</p>
+
+            <h2 id="toi-uu-anh">3. Tối ưu hóa hình ảnh</h2>
+            <p>Để Google có thể "đọc" được hình ảnh, bạn cần:</p>
+            <ul>
+                <li>Đặt tên tệp không dấu, nối bằng gạch ngang: <code>hoc-html-fpt.jpg</code>.</li>
+                <li>Luôn có thuộc tính <code>alt="Mô tả nội dung ảnh"</code>.</li>
+            </ul>
+
+            <h2 id="internal-link">4. Liên kết nội bộ (Internal Link)</h2>
+            <p>Đừng quên điều hướng người dùng đến các bài viết liên quan như <a href="#">Hướng dẫn học CSS3</a> hoặc <a href="#">Thiết kế UI/UX cơ bản</a> để tăng thời gian ở lại trang.</p>
+        </article>
+
+        <aside>
+            <div style="background: var(--bg-light); padding: 20px; border-radius: 8px;">
+                <h3>Khóa học liên quan</h3>
+                <p>👉 Lập trình JavaScript</p>
+                <p>👉 Thiết kế Responsive</p>
+                <p>👉 Tối ưu hóa tốc độ Web</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>FPT Polytechnic</h3>
+                <p>Thực học - Thực nghiệp.</p>
+                <p>Hệ thống đào tạo lập trình viên hàng đầu.</p>
+            </div>
+            <div>
+                <h3>Liên kết nhanh</h3>
+                <p><a href="#" style="color: white; text-decoration: none;">Chính sách bảo mật</a></p>
+                <p><a href="#" style="color: white; text-decoration: none;">Điều khoản sử dụng</a></p>
+            </div>
+            <div>
+                <h3>Liên hệ</h3>
+                <p>Email: info@fpt.edu.vn</p>
+                <p>Hotline: 1900 xxxx</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px; font-size: 0.8rem; opacity: 0.7;">
+            &copy; 2026 FPT Polytechnic. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
